@@ -36,7 +36,7 @@ public class RedisPriorityQueueService {
     }
 
     // Clear the queue
-    public void clearQueue() {
+    public void delete() {
         jedis.del(QUEUE_NAME);
     }
 

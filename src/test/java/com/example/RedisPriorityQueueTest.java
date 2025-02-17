@@ -16,7 +16,7 @@ public class RedisPriorityQueueTest {
     @BeforeClass
     public static void setup() {
         queue = new RedisPriorityQueueService();
-        queue.clearQueue();
+        queue.delete();
     }
 
     @Test
@@ -53,11 +53,11 @@ public class RedisPriorityQueueTest {
         assertEquals("HighPriority", tasks.get(0).getElement());
         assertEquals("LowPriority", tasks.get(1).getElement());
 
-        queue.clearQueue(); // Clean up after test
+        queue.delete(); // Clean up after test
     }
 
     @AfterClass
     public static void cleanup() {
-        queue.clearQueue();
+        queue.delete();
     }
 }

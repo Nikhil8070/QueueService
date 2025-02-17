@@ -35,13 +35,13 @@ public class RedisPriorityQueueTest {
 
     @Test
     public void testSamePriorityFCFS() {
-        queue.push("First", 1);
-        queue.push("Second", 1);
-        queue.push("Third", 1);
+        queue.push("CTest", 1);
+        queue.push("ATest", 1);
+        queue.push("BTest", 1);
 
-        assertEquals("First", queue.pull());
-        assertEquals("Second", queue.pull());
-        assertEquals("Third", queue.pull());
+        assertEquals("CTest", queue.pull());
+        assertEquals("ATest", queue.pull());
+        assertEquals("BTest", queue.pull());
     }
 
     @Test
